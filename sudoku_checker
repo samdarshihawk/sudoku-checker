@@ -1,10 +1,9 @@
 def check_sudoku(my_sudoku):
-    criteria=[]
     max_num=len(my_sudoku)
     check_list = list(range(1,max_num+1))
     #to check the number of sudoku within nxn
     if type(my_sudoku[0][0])==int:
-        criteria.append(1)
+        pass
     else:
         return(False)
 # check the range of the number
@@ -13,14 +12,14 @@ def check_sudoku(my_sudoku):
             if num not in check_list:
                 return(False)
             else:
-                criteria.append(1)
+                pass
 # check occurence of number row-wise
     for z in my_sudoku:
         for e in z:
             if z.count(e) > 1:
                 return(False)
             else:
-                criteria.append(1)
+                pass
 # check occurence of number column-wise
     for g in range(max_num):
         column = []
